@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Think Like A CEO — Jessica Pinili</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23C1384A'/><text y='.9em' font-size='28' font-family='Arial Black' font-weight='900' fill='%23F2EDDC' x='5' dominant-baseline='auto'>TL</text><text y='1em' font-size='22' font-family='Arial Black' font-weight='900' fill='%23F2EDDC' x='5' dy='28'>AC</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--burg:#3D0C11;--crim:#C1384A;--blush:#F2A7B0;--cream:#F2EDDC;--yellow:#F5D547;--white:#FDFAF6}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#FDFAF6;color:#3D0C11}
+a{text-decoration:none}
+
+.nav{background:#FDFAF6;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #EADDD8;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#3D0C11;font-style:italic}
+.nav-cta{background:#3D0C11;color:#F2EDDC;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:30px}
+
+.hero{background:#C1384A;padding:70px 40px 56px;position:relative;overflow:hidden}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero-wobble{display:inline-block;background:#F5D547;color:#3D0C11;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:6px 16px;border-radius:30px;transform:rotate(-1.5deg);margin-bottom:22px}
+.hero-title{font-family:'Anton',sans-serif;font-size:clamp(64px,8vw,110px);line-height:.92;color:#F2EDDC;letter-spacing:-.01em;text-transform:uppercase}
+.hero-title .ceo{color:#F5D547}
+.hosted-badge{display:inline-block;background:#F2A7B0;color:#3D0C11;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-top:6px;transform:rotate(1deg)}
+.hero-right{background:#3D0C11;border-radius:20px;padding:32px}
+.hero-right-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#F2A7B0;font-weight:500;margin-bottom:12px}
+.hero-right-h{font-family:'Playfair Display',serif;font-size:22px;color:#F2EDDC;font-weight:700;line-height:1.25;margin-bottom:12px}
+.hero-right-body{font-size:13px;color:#C9A8AE;line-height:1.65;font-weight:300;margin-bottom:24px}
+.hero-cta-btn{display:block;background:#F5D547;color:#3D0C11;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:15px 28px;border-radius:40px;text-align:center;margin-bottom:10px}
+.hero-price-note{font-size:11px;color:#7A4F54;display:flex;align-items:center;gap:8px;justify-content:center}
+.strike{text-decoration:line-through;opacity:.5;color:#C9A8AE}
+.free-tag{background:#F5D547;color:#3D0C11;font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:12px}
+
+.ticker{background:#3D0C11;padding:10px 0;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;animation:ticker 22s linear infinite}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.t-i{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#F2EDDC;padding:0 20px;opacity:.85}
+.t-star{color:#F5D547;font-size:10px}
+
+.mirror{background:#3D0C11;padding:70px 40px}
+.mirror-inner{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:12px}
+.mirror .eyebrow{color:#F2A7B0}
+.mirror-h{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,42px);color:#F2EDDC;font-weight:700;line-height:1.2;margin-bottom:28px}
+.mirror-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:700px}
+.mirror-card{background:#4D1520;border-radius:14px;padding:20px 22px;border:1px solid #6B2030}
+.mirror-card-text{font-size:13px;color:#D4A8AE;line-height:1.6;font-weight:300}
+
+.yellow-bar{background:#F5D547;padding:16px 40px;display:flex;align-items:center;justify-content:center;gap:16px}
+.yellow-bar-text{font-family:'Anton',sans-serif;font-size:18px;color:#3D0C11;text-transform:uppercase;letter-spacing:.04em}
+.yellow-bar-dot{width:6px;height:6px;background:#3D0C11;border-radius:50%;opacity:.4}
+
+.why-section{padding:70px 40px;background:#FDFAF6}
+.why-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.why-eyebrow{color:#C1384A}
+.why-h{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);color:#3D0C11;font-weight:700;line-height:1.25;margin-bottom:16px}
+.why-body{font-size:14px;color:#6B4A4E;line-height:1.75;font-weight:300}
+.fun-box{background:#C1384A;border-radius:20px;padding:28px;color:#F2EDDC}
+.fun-box-title{font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;letter-spacing:.02em;line-height:1;margin-bottom:16px}
+.fun-box-title span{color:#F5D547}
+.fun-box-body{font-size:13px;color:#F2C8CC;line-height:1.65;font-weight:300}
+
+.phases{padding:70px 40px;background:#fff;border-top:1px solid #EADDD8}
+.phases-inner{max-width:1100px;margin:0 auto}
+.phases-h{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);color:#3D0C11;font-weight:700;line-height:1.25;margin-bottom:36px}
+.phases-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.phase-card{border-radius:16px;padding:28px}
+.phase-card.one{background:#3D0C11}
+.phase-card.two{background:#F5D547}
+.phase-num{font-family:'Anton',sans-serif;font-size:52px;line-height:1;margin-bottom:12px}
+.phase-card.one .phase-num{color:#F2A7B0}
+.phase-card.two .phase-num{color:#3D0C11;opacity:.2}
+.phase-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:6px}
+.phase-card.one .phase-label{color:#F2A7B0}
+.phase-card.two .phase-label{color:#C1384A}
+.phase-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.phase-card.one .phase-title{color:#F2EDDC}
+.phase-card.two .phase-title{color:#3D0C11}
+.phase-body{font-size:12px;line-height:1.65;font-weight:300}
+.phase-card.one .phase-body{color:#C9A8AE}
+.phase-card.two .phase-body{color:#5C3D2E}
+
+.checklist{padding:70px 40px;background:#FDFAF6}
+.checklist-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.checklist-left-h{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);color:#3D0C11;font-weight:700;line-height:1.25;margin-bottom:8px}
+.checklist-left-sub{font-size:14px;color:#6B4A4E;font-weight:300;line-height:1.65}
+.checklist-sticker{background:#F5D547;border-radius:14px;padding:20px 22px;margin-top:24px;transform:rotate(-1deg);display:inline-block}
+.sticker-text{font-family:'Anton',sans-serif;font-size:22px;color:#3D0C11;text-transform:uppercase;line-height:1.1}
+.sticker-sub{font-size:11px;color:#5C3D2E;margin-top:6px;font-weight:400}
+.check-item{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+.check-dot{width:22px;height:22px;border-radius:50%;background:#C1384A;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.check-text{font-size:13.5px;color:#3D0C11;line-height:1.55;font-weight:400}
+
+.results-strip{background:#F5D547;padding:40px}
+.results-inner{max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center}
+.result-box{flex:1;background:#3D0C11;border-radius:14px;padding:24px;text-align:center}
+.result-num{font-family:'Anton',sans-serif;font-size:42px;color:#F5D547;display:block;letter-spacing:.02em}
+.result-label{font-size:11px;color:#C9A8AE;letter-spacing:.08em;text-transform:uppercase;margin-top:4px;display:block;font-weight:400}
+.results-text{flex:0 0 220px;padding-left:16px}
+.results-text-h{font-family:'Playfair Display',serif;font-size:24px;color:#3D0C11;font-weight:700;line-height:1.25;margin-bottom:8px}
+.results-text-body{font-size:13px;color:#5C3D2E;line-height:1.6;font-weight:300}
+
+.proof{padding:70px 40px;background:#fff}
+.proof-inner{max-width:1100px;margin:0 auto}
+.proof-h{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);color:#3D0C11;font-weight:700;line-height:1.25;margin-bottom:32px}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proof-card{border:1px solid #EADDD8;border-radius:16px;padding:24px;background:#FDFAF6}
+.proof-stars{display:flex;gap:3px;margin-bottom:12px}
+.proof-star{width:12px;height:12px;background:#F5D547;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.proof-q{font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:#3D0C11;line-height:1.65;margin-bottom:14px}
+.proof-name{font-size:10px;font-weight:500;color:#C1384A;letter-spacing:.1em;text-transform:uppercase}
+.proof-result{font-size:11px;color:#9C7A80;margin-top:3px}
+.proof-highlight{background:#C1384A;border-radius:16px;padding:24px;grid-column:span 2}
+.proof-highlight .proof-q{color:#F2EDDC}
+.proof-highlight .proof-name{color:#F5D547}
+.proof-highlight .proof-result{color:#F2A7B0}
+
+.checkout-section{padding:70px 40px;background:#3D0C11}
+.checkout-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.checkout-left-h{font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,44px);color:#F2EDDC;font-weight:700;line-height:1.15;margin-bottom:16px}
+.checkout-left-body{font-size:14px;color:#C9A8AE;line-height:1.7;font-weight:300;margin-bottom:24px}
+.code-box{background:#4D1520;border-radius:14px;padding:18px 22px;border:1px solid #6B2030;display:inline-flex;align-items:center;gap:14px}
+.code-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#F2A7B0;font-weight:500}
+.code-val{font-family:'Anton',sans-serif;font-size:20px;color:#F5D547;letter-spacing:.08em}
+.price-note{margin-top:12px;font-size:13px;color:#7A4F54;display:flex;align-items:center;gap:8px}
+.checkout-frame{border-radius:16px;overflow:hidden;height:520px;background:#fff;width:100%}
+.checkout-frame iframe{width:100%;height:100%;border:none;border-radius:16px}
+
+.final-cta{background:#C1384A;padding:80px 40px;text-align:center}
+.final-inner{max-width:700px;margin:0 auto}
+.final-wobble{display:inline-block;background:#F5D547;color:#3D0C11;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:20px;transform:rotate(-1deg);margin-bottom:20px}
+.final-h{font-family:'Anton',sans-serif;font-size:clamp(40px,6vw,80px);color:#F2EDDC;text-transform:uppercase;line-height:.95;margin-bottom:16px}
+.final-h span{color:#F5D547}
+.final-sub{font-size:15px;color:#F2C8CC;line-height:1.65;margin-bottom:32px;font-weight:300}
+.final-btn{display:inline-block;background:#3D0C11;color:#F2EDDC;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:17px 38px;border-radius:40px;margin-bottom:12px}
+.final-note{font-size:12px;color:#F2C8CC;display:flex;align-items:center;justify-content:center;gap:10px}
+
+.footer{background:#3D0C11;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #4D1520}
+.footer-logo{font-family:'Playfair Display',serif;font-size:13px;color:#7A4F54;letter-spacing:.1em;font-style:italic}
+.footer-copy{font-size:10px;color:#5A3038;letter-spacing:.06em}
+
+@media(max-width:768px){
+.hero-inner,.why-inner,.phases-grid,.checklist-inner,.proof-grid,.checkout-inner{grid-template-columns:1fr}
+.mirror-grid{grid-template-columns:1fr}
+.results-inner{flex-direction:column}
+.results-text{padding-left:0;text-align:center}
+.result-box{width:100%}
+.proof-highlight{grid-column:span 1}
+.nav{padding:12px 16px}
+.nav-logo{font-size:12px}
+.hero{padding:40px 16px 36px}
+.hero-title{font-size:clamp(52px,16vw,80px)}
+.mirror{padding:48px 16px}
+.mirror-h{font-size:clamp(22px,6vw,32px)}
+.why-section{padding:48px 16px}
+.phases{padding:48px 16px}
+.checklist{padding:48px 16px}
+.checklist-sticker{transform:none}
+.proof{padding:48px 16px}
+.checkout-section{padding:48px 16px}
+.final-cta{padding:56px 16px}
+.final-h{font-size:clamp(36px,12vw,60px)}
+.footer{padding:16px}
+.results-strip{padding:28px 16px}
+.yellow-bar{padding:12px 16px;flex-wrap:wrap;gap:8px;text-align:center}
+.yellow-bar-text{font-size:14px}
+.yellow-bar-dot{display:none}
+.fun-box{margin-top:0}
+.hero-right{margin-top:0}
+.phases-grid{gap:12px}
+.checklist-inner{gap:32px}
+.why-inner{gap:32px}
+.checkout-inner{gap:32px}
+.hero-inner{gap:24px}
+.result-num{font-size:36px}
+.hero-right-h{font-size:18px}
+.mirror-grid{gap:10px}
+.mirror-card{padding:16px}
+.proof-grid{gap:12px}
+.proof-card{padding:18px}
+.proof-highlight{padding:20px}
+.code-box{flex-direction:column;gap:6px;text-align:center}
+.checklist-left-h{font-size:clamp(20px,6vw,28px)}
+.why-h{font-size:clamp(20px,6vw,28px)}
+.phases-h{font-size:clamp(20px,6vw,28px)}
+.proof-h{font-size:clamp(20px,6vw,28px)}
+.checkout-left-h{font-size:clamp(22px,7vw,32px)}
+.results-text-h{font-size:18px}
+}
+@media(max-width:400px){
+.hero-title{font-size:48px}
+.final-h{font-size:32px}
+.result-num{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">Jessica Pinili</span>
+  <a href="#checkout" class="nav-cta">Get free access</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-wobble">Free masterclass</div>
+      <div class="hero-title">THINK<br>LIKE<br>A <span class="ceo">CEO</span></div>
+      <div style="margin-top:14px"><span class="hosted-badge">Hosted by Jess Pinili</span></div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-right-eyebrow">One hour. Two phases. One breakthrough.</div>
+      <div class="hero-right-h">The clearest explanation of why your business has a ceiling and exactly how to raise it.</div>
+      <div class="hero-right-body">This isn't another strategy course. This is the missing piece that explains why the strategy keeps stalling.</div>
+      <a href="#checkout" class="hero-cta-btn">Yes, I want free access</a>
+      <div class="hero-price-note">
+        <span class="strike">$27</span>
+        <span class="free-tag">Now free</span>
+        <span style="color:#7A4F54;font-size:11px">Use code TLACEOFREE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="t-i">For women founders</span><span class="t-star">✦</span>
+    <span class="t-i">1 hour</span><span class="t-star">✦</span>
+    <span class="t-i">Two phases</span><span class="t-star">✦</span>
+    <span class="t-i">One breakthrough</span><span class="t-star">✦</span>
+    <span class="t-i">Instant access</span><span class="t-star">✦</span>
+    <span class="t-i">Hosted by Jess Pinili</span><span class="t-star">✦</span>
+    <span class="t-i">For women founders</span><span class="t-star">✦</span>
+    <span class="t-i">1 hour</span><span class="t-star">✦</span>
+    <span class="t-i">Two phases</span><span class="t-star">✦</span>
+    <span class="t-i">One breakthrough</span><span class="t-star">✦</span>
+    <span class="t-i">Instant access</span><span class="t-star">✦</span>
+    <span class="t-i">Hosted by Jess Pinili</span><span class="t-star">✦</span>
+  </div>
+</div>
+
+<section class="mirror">
+  <div class="mirror-inner">
+    <div class="eyebrow mirror">Sound familiar?</div>
+    <div class="mirror-h">You're doing everything right.<br>Still hitting the same wall.</div>
+    <div class="mirror-grid">
+      <div class="mirror-card"><div class="mirror-card-text">Revenue feels like a rollercoaster</div></div>
+      <div class="mirror-card"><div class="mirror-card-text">Your to-do list never ends, but results are slow</div></div>
+      <div class="mirror-card"><div class="mirror-card-text">Showing up "consistently" feels hard when life gets busy</div></div>
+      <div class="mirror-card"><div class="mirror-card-text">You know what to do but often doubt your abilities or leadership</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="yellow-bar">
+  <span class="yellow-bar-text">The problem isn't your work ethic</span>
+  <span class="yellow-bar-dot"></span>
+  <span class="yellow-bar-text">It's what no one taught you</span>
+  <span class="yellow-bar-dot"></span>
+  <span class="yellow-bar-text">Until now</span>
+</div>
+
+<section class="why-section">
+  <div class="why-inner">
+    <div>
+      <div class="eyebrow why-eyebrow">The real reason</div>
+      <div class="why-h">You're only working with half the equation.</div>
+      <div class="why-body">Strategy alone isn't enough. Mindset work alone isn't enough. The gap between where you are and where you want to be lives in the space between two phases and most coaches only teach one of them.<br><br>This masterclass shows you both. In one hour. For free.</div>
+    </div>
+    <div class="fun-box">
+      <div class="fun-box-title">One hour.<br><span>Total</span><br>clarity.</div>
+      <div class="fun-box-body">No fluff. No 12-module course. No homework. Just the clearest framework you've ever seen for why your business moves the way it does and what to do about it.</div>
+    </div>
+  </div>
+</section>
+
+<section class="phases">
+  <div class="phases-inner">
+    <div class="eyebrow" style="color:#C1384A">What you'll learn</div>
+    <div class="phases-h">Two phases. One complete picture.</div>
+    <div class="phases-grid">
+      <div class="phase-card one">
+        <div class="phase-num">01</div>
+        <div class="phase-label">Phase one — Strategy</div>
+        <div class="phase-title">Why your revenue keeps resetting and what compounding actually looks like</div>
+        <div class="phase-body">The specific pattern keeping your income inconsistent, and what a business built for real compounding growth looks like instead.</div>
+      </div>
+      <div class="phase-card two">
+        <div class="phase-num">02</div>
+        <div class="phase-label">Phase two — Nervous system</div>
+        <div class="phase-title">The subconscious ceiling capping your growth and how to rewire it</div>
+        <div class="phase-body">What your nervous system is actually doing behind the scenes, and the process for changing it without years of therapy or overhaul.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="checklist">
+  <div class="checklist-inner">
+    <div class="checklist-left">
+      <div class="eyebrow" style="color:#C1384A">After one hour you'll know</div>
+      <div class="checklist-left-h">The shift that changes everything.</div>
+      <div class="checklist-left-sub">Six specific insights most women founders have never been shown. This isn't theory. This is the diagnostic your business has been waiting for.</div>
+      <div class="checklist-sticker">
+        <div class="sticker-text">Free.<br>One hour.<br>Game over.</div>
+        <div class="sticker-sub">Use code TLACEOFREE at checkout</div>
+      </div>
+    </div>
+    <div class="checks">
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">The real reason your best month never sticks (and it's not your work ethic)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">Why you feel busy all week but still underpaid at the end of the month</div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">The 2 silent leaks in your sales system that make income unpredictable</div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">How to stabilise revenue without launching every 6 weeks or over-delivering to compensate</div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">The self-concept pattern that makes you subconsciously slow down right when momentum builds</div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7.2L8 2.8" stroke="#F2EDDC" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="check-text">What to fix first if you're stuck between $5K and $30K months and can't seem to break through</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="results-strip">
+  <div class="results-inner">
+    <div class="result-box">
+      <span class="result-num">1 hr</span>
+      <span class="result-label">that's all it takes</span>
+    </div>
+    <div class="result-box">
+      <span class="result-num">2 shifts</span>
+      <span class="result-label">strategy + nervous system</span>
+    </div>
+    <div class="result-box">
+      <span class="result-num">30 days</span>
+      <span class="result-label">to see real shifts</span>
+    </div>
+    <div class="results-text">
+      <div class="results-text-h">This is the hour that changes how you run everything.</div>
+      <div class="results-text-body">Women inside WMHQ report revenue shifts within 30 days of applying both phases.</div>
+    </div>
+  </div>
+</div>
+
+<section class="proof">
+  <div class="proof-inner">
+    <div class="eyebrow" style="color:#C1384A">What women are saying</div>
+    <div class="proof-h">Real women. Real shifts.</div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-stars"><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div></div>
+        <div class="proof-q">"I finally understood why I kept sabotaging my own momentum. This one hour changed how I run everything."</div>
+        <div class="proof-name">Sarah M.</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-stars"><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div></div>
+        <div class="proof-q">"I've done the strategy courses. I've done the mindset work. This is the first time someone showed me how they connect."</div>
+        <div class="proof-name">Renee T.</div>
+      </div>
+      <div class="proof-highlight">
+        <div class="proof-stars"><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div><div class="proof-star"></div></div>
+        <div class="proof-q">"I sat there and cried. Not because it was sad but because I finally had words for what had been happening in my business for three years. Within a month I had my biggest revenue week ever."</div>
+        <div class="proof-name">Michelle K.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="checkout-section" id="checkout">
+  <div class="checkout-inner">
+    <div class="checkout-left">
+      <div class="eyebrow" style="color:#F2A7B0;margin-bottom:14px">Get instant access</div>
+      <div class="checkout-left-h">Watch it free.<br>Start shifting now.</div>
+      <div class="checkout-left-body">Use the code below at checkout to unlock the full masterclass at no cost. You'll get instant access and can watch in your own time.</div>
+      <div class="code-box">
+        <span class="code-label">Your free code</span>
+        <span class="code-val">TLACEOFREE</span>
+      </div>
+      <div class="price-note" style="margin-top:14px;gap:12px">
+        <span style="font-family:'Anton',sans-serif;font-size:28px;text-decoration:line-through;color:#6B2030;opacity:.7">$27</span>
+        <span style="font-family:'Anton',sans-serif;font-size:28px;color:#F5D547">FREE</span>
+        <span class="free-tag" style="font-size:10px">with code TLACEOFREE</span>
+      </div>
+    </div>
+    <div style="background:#4D1520;border-radius:20px;padding:40px;text-align:center;border:1px solid #6B2030">
+      <div style="font-family:'Playfair Display',serif;font-size:28px;color:#F2EDDC;font-weight:700;line-height:1.2;margin-bottom:10px">Ready to stop<br>hitting the ceiling?</div>
+      <div style="font-size:13px;color:#C9A8AE;line-height:1.65;font-weight:300;margin-bottom:28px">Click below, enter code <strong style="color:#F5D547">TLACEOFREE</strong> at checkout and get instant access for free.</div>
+      <a href="https://www.jessicapinili.com/offers/6woXWUF4" target="_blank" style="display:block;background:#F5D547;color:#3D0C11;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:18px 28px;border-radius:40px;text-decoration:none;margin-bottom:14px">Yes, I want free access</a>
+      <div style="font-size:11px;color:#7A4F54;display:flex;align-items:center;justify-content:center;gap:8px">
+        <span style="text-decoration:line-through;color:#9C6070;font-size:20px;font-weight:500">$27</span>
+        <span style="background:#F5D547;color:#3D0C11;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:12px">Free with code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-inner">
+    <div class="final-wobble">One hour. Zero excuses.</div>
+    <div class="final-h">STOP<br>HITTING<br>THE <span>SAME</span><br>CEILING.</div>
+    <div class="final-sub">Watch the free masterclass and see exactly what's been holding you back and what to do about it. One hour. Two phases. Your business changes today.</div>
+    <div><a href="#checkout" class="final-btn">Yes, give me free access</a></div>
+    <div class="final-note">
+      <span class="free-tag" style="background:#3D0C11;color:#F5D547">Free</span>
+      <span>Use code TLACEOFREE at checkout</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="footer-logo">Jessica Pinili</span>
+  <span class="footer-copy">© Woman Mastery HQ</span>
+</footer>
+
+</body>
+</html>
